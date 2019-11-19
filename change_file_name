@@ -1,0 +1,9 @@
+import os
+
+for _, _, files in os.walk("."):
+    for idx, filename in enumerate(files):
+        if filename[-3:] == 'txt':
+            os.rename("./%s" %filename, str(idx)+'.txt')
+            
+            
+#https://brunch.co.kr/@imagineer/25 블로그 참고하여 나에게 맞게 수정
