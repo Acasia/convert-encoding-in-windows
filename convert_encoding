@@ -1,0 +1,11 @@
+# -*- coding: utf8-*-
+import os
+
+old_directory = "./ITnews623_sim383/"
+new_directory = "./convert/"
+for i in range(1001):
+    old_file_name = old_directory + str(i) + ".txt"
+    new_file_name = new_directory + str(i) + ".txt"
+    os.system("iconv -f CP949 -t UTF-8 %s > %s"%(old_file_name, new_file_name))
+    
+#윈도우 터미널이 너무 익숙하지 않아서, cygwin을 설치하여 진행함.
